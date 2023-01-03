@@ -6,8 +6,10 @@ import 'package:flutter_provider_learn/provider/favourite_provider.dart';
 import 'package:flutter_provider_learn/provider/multi_skill_provider.dart';
 import 'package:flutter_provider_learn/provider/select_provider.dart';
 import 'package:flutter_provider_learn/provider/slider_provider.dart';
+import 'package:flutter_provider_learn/provider/storage_provider.dart';
 import 'package:flutter_provider_learn/screen/countexample.dart';
 import 'package:flutter_provider_learn/screen/favouritesScreen.dart';
+import 'package:flutter_provider_learn/screen/name_page.dart';
 import 'package:flutter_provider_learn/screen/oneskill.dart';
 import 'package:flutter_provider_learn/screen/sliderexample.dart';
 import 'package:flutter_provider_learn/singleselec.dart';
@@ -42,11 +44,14 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => MultiSkillProvider(),
         ),
+        ChangeNotifierProvider(
+          create: (_) => StorageProvider(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
-        home: const OlgaGrid(),
+        home: const NamePage(),
       ),
     );
   }
