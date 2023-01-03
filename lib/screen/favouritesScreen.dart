@@ -40,7 +40,7 @@ class _FavourtitesScreenState extends State<FavourtitesScreen> {
                         return ListTile(
                           onTap: () {
                             // setState(() {});
-                            if (selectedItem.contains(index)) {
+                            if (value.selectedItem.contains(index)) {
                               value.removeItems(index);
                             } else {
                               value.addItems(index);
